@@ -4,3 +4,5 @@ node_js:
   
 script:
   - yarn
+  git:
+    submodules: false
