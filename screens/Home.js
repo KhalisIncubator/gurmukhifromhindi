@@ -4,24 +4,26 @@ import {
   View,
   Text,
 } from 'react-native';
-import {Card, Header} from 'react-native-elements';
+import {Card, Header, Tile} from 'react-native-elements';
+import globalStyle from '../config/styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-import {styles} from '../config/styles';
+
 const Courses = require ('../config/courses.json');
 const CourseList = Courses.courses;
 
-import {CourseCard} from '../components/CourseCard';
+import CourseCard from '../components/CourseCard';
+import Flashcard from '../components/Flashcard';
 
 class HomeScreen extends React.Component{
   static navigationOptions = {
-    title: "Home",
+    title: "Title",
     headerRight: (
-      <View style={styles.iconContainer}>
+      <View style={globalStyle.iconContainer}>
         <Icon 
           name="chart-line" 
           size={20} 
-          style={styles.icon}
+          style={globalStyle.icon}
           onPress={ ()=> {  
             alert('Hi!')
           }}
@@ -31,9 +33,10 @@ class HomeScreen extends React.Component{
   };
   render() {
     return(
-       <View style={styles.container}>
+       <View style={globalStyle.container}>
         <View>
-          <Text>Welcome to learn Gurmukhi from Hindi!</Text>
+           <CourseCard title={CourseList[0].title} img={CourseList[0].Image} desc={CourseList[0].Description}/>
+           <Flashcard />
         </View>
       </View>
     );

@@ -1,31 +1,25 @@
 import React from 'react';
 
 import {
-  StyleSheet,
   View,
   Text,
   Button,
   FlatList,
-  SafeAreaView,
 } from 'react-native';
 
+import {Card} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
-class CourseCard extends React.Component{
-  
-  constructor(props){
-    super(props);
-    const jsonFile = this.props.jsonFile;
-
-    const courseName = jsonFile.title;
-  }
-
+export default class CourseCard extends React.Component{
   render(){
     return(
       <View>
-        <Text>{this.courseName}</Text>
+      <Card
+      title={this.props.title}
+      image={this.props.img}>
+      <Text>{this.props.desc}</Text>
+      </Card>
       </View>
     );
   }
 }
-
-export default CourseCard;

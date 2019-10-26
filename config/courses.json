@@ -3,6 +3,7 @@
     {
       "title": "Painti Akhaar", 
       "Description": "Learn the Punjabi Alphabet",
+      "Image": "https://i.pinimg.com/236x/19/85/86/1985864837b1229390cf060b4b58bbfd--guru-alphabet.jpg",
       "Quiz Total": "7", 
       "Contents" : {
         "Row1": "ੳ ਅ ੲ ਸ ਹ",        
@@ -12,11 +13,20 @@
         "Row5": "ਤ ਥ ਦ ਧ ਨ",
         "Row6": "ਪ ਫ ਬ ਭ ਮ",
         "Row7": "ਯ ਰ ਲ ਵ ੜ"
-      },
-      "Quizes": [{
-        "":""
-      }]
+      }
     },
-    {"title": "Muharni Part 1"}
+    {
+      "title": "Muharni Part 1",
+      "Description": "Learn the Punjabi vowels",
+      "Image": "https://i.pinimg.com/236x/19/85/86/1985864837b1229390cf060b4b58bbfd--guru-alphabet.jpg",
+      "Quiz Total": "7", 
+      "excludedRows": [1, 2, 3],
+      "Contents" : {
+        "Row1": "In Punjabi, vowels are not denoted by typical character ,unlike English.",        
+        "Row2": "Instead, they are denoted by special symbols that can be attached to consonants.",
+        "Row3": "We will go over attaching to character in the next lesson, however. First, let us learn these vowels",
+        "Row4": "w i I u U y Y o O M W"
+      }
+    }
   ]
 }
