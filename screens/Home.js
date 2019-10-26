@@ -3,38 +3,42 @@ import {
   StyleSheet,
   View,
   Text,
-  Button,
-  FlatList,
-  SafeAreaView,
 } from 'react-native';
+import {Card, Header} from 'react-native-elements';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
-import {CoursesList} from '../config/courses.json';
+import {styles} from '../config/styles';
+const Courses = require ('../config/courses.json');
+const CourseList = Courses.courses;
+
+import {CourseCard} from '../components/CourseCard';
 
 class HomeScreen extends React.Component{
   static navigationOptions = {
-    title: 'Home'
-   };
+    title: "Home",
+    headerRight: (
+      <View style={styles.iconContainer}>
+        <Icon 
+          name="chart-line" 
+          size={20} 
+          style={styles.icon}
+          onPress={ ()=> {  
+            alert('Hi!')
+          }}
+        />
+      </View>
+    )
+  };
   render() {
     return(
        <View style={styles.container}>
         <View>
-          <Text>Welcome to learn _________</Text>
-          <Button
-            onPress={() => this.props.navigation.navigate('Placeholder')}
-            title="View Placeholder page"
-          />
+          <Text>Welcome to learn Gurmukhi from Hindi!</Text>
         </View>
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-});
+
 export default HomeScreen;

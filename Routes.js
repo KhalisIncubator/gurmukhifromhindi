@@ -7,17 +7,15 @@ import {
 
 import {createBottomTabNavigator} from 'react-navigation-tabs'
 
-import Icon from 'react-native-vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Homescreen from './screens/Home';
 import Placeholder from './screens/Placeholder';
 import SettingsScreen from './screens/Settings';
 
-const HomeNavigator = createSwitchNavigator(
+const HomeNavigator = createStackNavigator(
   {
-    Home: Homescreen, 
-    Placeholder: Placeholder,
-    Settings: SettingsScreen,
+    Home: Homescreen,
   },
   {
     initialRouteName: 'Home',
@@ -32,17 +30,71 @@ const HomeNavigator = createSwitchNavigator(
     },
   }
 );
-
+const SearchNav = createStackNavigator(
+  {
+    Home: Placeholder, 
+  },
+  {
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
+const SettingsNav = createStackNavigator(
+  {
+    Home: SettingsScreen, 
+  },
+  {
+    initialRouteName: 'Home',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
 const AppNavigator = createBottomTabNavigator({
   Home: {
     screen: HomeNavigator,
+    navigationOptions: {
+      tabBarIcon: ({tintColor}) =>
+        <Icon name="home" size={20} color={tintColor} />
+    }
   },
-  Placeholder: {
-    screen: Placeholder,
+  Search : {
+    screen: SearchNav,
+    navigationOptions: {
+      tabBarIcon: ({tintColor}) =>
+        <Icon name="search" size={20} color={tintColor} />
+    }
   },
   Settings: {
-    screen: SettingsScreen,
+    screen: SettingsNav,
+    navigationOptions: {
+      tabBarIcon: ({tintColor}) =>
+        <Icon name="cog" size={20} color={tintColor} />
+    }
   },
-});
+},
+{
+  tabBarOptions: {
+    activeTintColor: '#f4511e',
+    labelStyle: {
+      fontSize: 12,
+    },
+  }
+}
+);
 
 export default createAppContainer(AppNavigator);
