@@ -39,7 +39,8 @@ class HomeScreen extends React.Component{
              <View style={globalStyle.container}>
               <CourseCard 
               title={CourseList[index].title} 
-              desc={CourseList[index].Description} />
+              desc={CourseList[index].Description}
+              img={CourseList[index].Image} />
               </View>
              }
              keyExtractor={(item, index) => index.toString()}

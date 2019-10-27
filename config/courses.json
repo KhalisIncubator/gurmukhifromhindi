@@ -3,7 +3,7 @@
     {
       "title": "Painti Akhaar", 
       "Description": "Learn the Punjabi Alphabet",
-      "Image": "../config/img/testimg.png",
+      "Image": "paintiAkhar",
       "Quiz Total": "7", 
       "Lessons" : {
         "Row1": { 
