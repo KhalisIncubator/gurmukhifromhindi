@@ -1,10 +1,9 @@
 import React from 'react';
 import {
-  StyleSheet,
   View,
-  Text,
+  ScrollView,
+  FlatList,
 } from 'react-native';
-import {Card, Header, Tile} from 'react-native-elements';
 import globalStyle from '../config/styles';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
@@ -13,7 +12,6 @@ const Courses = require ('../config/courses.json');
 const CourseList = Courses.courses;
 
 import CourseCard from '../components/CourseCard';
-import Flashcard from '../components/Flashcard';
 
 class HomeScreen extends React.Component{
   static navigationOptions = {
@@ -33,11 +31,20 @@ class HomeScreen extends React.Component{
   };
   render() {
     return(
-       <View style={globalStyle.container}>
-        <View>
-           <CourseCard title={CourseList[0].title} img={CourseList[0].Image} desc={CourseList[0].Description}/>
-        </View>
-      </View>
+       <ScrollView style={globalStyle.container}>
+           <FlatList 
+           data={CourseList}
+           renderItem={
+             ({item, index}) =>
+             <View style={globalStyle.container}>
+              <CourseCard 
+              title={CourseList[index].title} 
+              desc={CourseList[index].Description} />
+              </View>
+             }
+             keyExtractor={(item, index) => index.toString()}
+             />
+      </ScrollView>
     );
   }
 }

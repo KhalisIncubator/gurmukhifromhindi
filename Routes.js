@@ -12,10 +12,33 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import Homescreen from './screens/Home';
 import Placeholder from './screens/Placeholder';
 import SettingsScreen from './screens/Settings';
+import Course from './screens/Course';
+import LessonSelector from './screens/LessonSelector';
+
+
+const CourseNav = createStackNavigator(
+  {
+    SelectLesson: LessonSelector, 
+    Course: Course,
+  },
+  {
+    initialRouteName: 'SelectLesson',
+    defaultNavigationOptions: {
+      headerStyle: {
+        backgroundColor: '#f4511e',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    },
+  }
+);
 
 const HomeNavigator = createStackNavigator(
   {
     Home: Homescreen,
+    Learn: CourseNav,
   },
   {
     initialRouteName: 'Home',

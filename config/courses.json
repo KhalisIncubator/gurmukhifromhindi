@@ -3,10 +3,14 @@
     {
       "title": "Painti Akhaar", 
       "Description": "Learn the Punjabi Alphabet",
-      "Image": "https://i.pinimg.com/236x/19/85/86/1985864837b1229390cf060b4b58bbfd--guru-alphabet.jpg",
+      "Image": "../config/img/testimg.png",
       "Quiz Total": "7", 
-      "Contents" : {
-        "Row1": "ੳ ਅ ੲ ਸ ਹ",        
+      "Lessons" : {
+        "Row1": { 
+          "Contents": "ੳ ਅ ੲ ਸ ਹ",
+          "Icon": "flight-takeoff",
+          "Name": "First Line"
+        },        
         "Row2": "ਕ ਖ ਗ ਘ ਙ ",
         "Row3": "ਚ ਛ ਜ ਝ ਞ",
         "Row4": "ਟ ਠ ਡ ਢ ਣ",
@@ -27,6 +31,34 @@
         "Row3": "We will go over attaching to character in the next lesson, however. First, let us learn these vowels",
         "Row4": "w i I u U y Y o O M W"
       }
+    }, 
+    {
+      "title": "Muharni II",
+      "Description": "Combining Vowels and Consonants",
+      "Image": "",
+      "Quiz Total": "7",
+      "excludedRows": [],
+      "Contents":{
+        "Row1": "Let's learn how to combine these muharni characters and Punjabi letters!",
+        "Row 2": "In Punjabi, these combinations of characters and letters is compiled in the Muharni Table",
+        "Row 3": "Most of these rows follow the same combination form, except the first row. ",
+        "Row 4": "This lesson, however ,will deal with the regular combinations and we will come back in a later lesson to discuss the first row",
+        "Row 5": ""
+      } 
+    },
+    {
+      "title": "Muharni III",
+      "Description": "Combining Vowels and Consonants (Irregular)",
+      "Image": "",
+      "Quiz Total": "7",
+      "excludedRows": [],
+      "Contents":{
+        "Row1": "As mentioned in the previous lesson, the first row of the muharni table includes irregular combinations.",
+        "Row 2": "What does this mean?",
+        "Row 3": "This means that the first three letters of the alphabet don't combine with all of the muharni characters.",
+        "Row 4": "Let's take a look:",
+        "Row 5": ""
+      } 
     }
   ]
 }

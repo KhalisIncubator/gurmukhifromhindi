@@ -16,6 +16,27 @@ export default globalStyle = StyleSheet.create({
   }, 
 
 });
+const courseCard = StyleSheet.create({
+  container: {
+    borderRadius: 15,
+  },
+  button: {
+    alignSelf: 'flex-start',
+    paddingTop: 10,
+  },
+  text: {
+    fontSize: 20,
+    padding: 5,
+  },
+  imageProps: {
+    resizeMode: 'contain',
+    padding: 10,
+  },
+  imgStyle: {
+    width: '100%',
+    height: 150
+  }
+});
 const flashCardStyle = StyleSheet.create({
   container: {
     backgroundColor: 'lightgray',
@@ -73,4 +94,5 @@ const flashCardStyle = StyleSheet.create({
 
 export {
   flashCardStyle,
+  courseCard,
 }

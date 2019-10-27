@@ -3,22 +3,25 @@ import React from 'react';
 import {
   View,
   Text,
-  Button,
   FlatList,
 } from 'react-native';
 
-import {Card} from 'react-native-elements';
+import {Card, Button} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import globalStyle, {courseCard} from '../config/styles';
 
 export default class CourseCard extends React.Component{
   render(){
     return(
       <View>
-      <Card
-      title={this.props.title}
-      image={this.props.img}>
-      <Text>{this.props.desc}</Text>
-      </Card>
+        <Card
+        containerStyle={courseCard.container}
+        imageStyle={courseCard.imgStyle}
+        imageProps={courseCard.imageProps}
+        title={this.props.title}>
+            <Text style={courseCard.text}>{this.props.desc}</Text>
+            <Button style={courseCard.button} title="Click!"/>
+        </Card>
       </View>
     );
   }
