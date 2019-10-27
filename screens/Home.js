@@ -36,7 +36,6 @@ class HomeScreen extends React.Component{
        <View style={globalStyle.container}>
         <View>
            <CourseCard title={CourseList[0].title} img={CourseList[0].Image} desc={CourseList[0].Description}/>
-           <Flashcard />
         </View>
       </View>
     );

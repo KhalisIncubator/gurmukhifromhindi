@@ -49,6 +49,18 @@ const flashCardStyle = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center'
   },
+  prounounciationPun: {
+    fontSize: 60,
+    alignSelf:'flex-end',
+  },
+  pronounciationEng: {
+    fontSize: 60,
+    alignSelf: 'flex-end',
+  },
+  pronounciationHindi: {
+    fontSize: 60,
+    alignSelf: 'flex-end',
+  },
   button: {
     borderRadius: 50,
     fontSize: 30,

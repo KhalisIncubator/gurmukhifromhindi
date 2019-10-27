@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 import CourseCard from '../components/CourseCard';
-
+import Flashcard from '../components/Flashcard';
+const anvaad = require('anvaad-js');
 
 export default class Course extends React.Component{
   constructor(props){
@@ -34,9 +35,18 @@ export default class Course extends React.Component{
   }
   generateCards(){
     this.loadCourseInfo();
-    if(!this.state.excludedIsNull){
+    if(this.state.excludedIsNull){
       
     }else {
+      let gurmukhi;
+      let hindi;
+      let english;
+      for(let i = 0; i < this.state.splitChars.length(); i++){
+        gurmukhi = anvaad.unicode(this.state.splitChars[i]);
+        hindi = anvaad.translit(gurmukhi, 'devnagri');
+        english = anvaad.translit(gurmukhi);
+        this.state.cards[i] = <Flashcard isTutorial={false} punjabi={gurmukhi} eng={english} hind={hindi} proEng={} proHindi={} />
+      }
       
     }
   }

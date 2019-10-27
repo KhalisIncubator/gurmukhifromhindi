@@ -13,13 +13,23 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class Flashcard extends React.Component{
   render(){
-    return(
-      <View style={flashCardStyle.container}>
-        <Text style={flashCardStyle.text}>Hi</Text>
+    if(this.props.isTutorial == false){
+      return(
+        <View style={flashCardStyle.container}>
+        <View style={flashCardStyle.rowContainer}>
+            <Text style={flashCardStyle.text}>{this.props.punjabi}</Text>
+            <Text style={Flashcard.prounounciationEng}>{this.props.sideTitle}</Text>
+        </View>
         <Divider />
-        <Text style={flashCardStyle.text}>Hi</Text>
+        <View style={flashCardStyle.rowContainer}>
+            <Text style={flashCardStyle.text}>{this.props.eng}</Text>
+            <Text style={Flashcard.prounounciationHindi}>{this.props.proHindi}</Text>
+        </View>
         <Divider />
-        <Text style={flashCardStyle.text}>Hi</Text>
+        <View style={flashCardStyle.rowContainer}>
+            <Text style={flashCardStyle.text}>{this.props.hindi}</Text>
+            <Text style={Flashcard.prounounciationEng}>{this.props.proEng}</Text>
+        </View>
         <TouchableOpacity>
           <Icon 
           name="chevron-circle-right"
@@ -29,6 +39,14 @@ export default class Flashcard extends React.Component{
           }}/>
         </TouchableOpacity> 
       </View> 
-    );
+      );
+    } else {
+      return(
+        <View style={flashCardStyle.container}>
+          <Text style={flashCardStyle.textTutorial}>{this.props.text}</Text>
+        </View>
+      );
+    }
+       
   }
 }
