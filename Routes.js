@@ -1,5 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
+import {View} from 'react-native';
 import {
   createSwitchNavigator,
   createAppContainer
@@ -50,7 +51,21 @@ const HomeNavigator = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold',
       },
+      title: "Title",
+      headerRight: (
+        <View style={globalStyle.iconContainer}>
+          <Icon 
+            name="chart-line" 
+            size={20} 
+            style={globalStyle.icon}
+            onPress={ ()=> {  
+              alert('Hi!')
+            }}
+          />
+        </View>
+      )
     },
+      
   }
 );
 const SearchNav = createStackNavigator(
