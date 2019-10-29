@@ -10,14 +10,18 @@ import {
 } from 'react-native';
 import globalStyle from '../config/styles';
 import  {ThemeContext} from '../contexts/ThemeContext';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Courses = require ('../config/courses.json');
 const CourseList = Courses.courses;
 
 import CourseCard from '../components/CourseCard';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   const theme = useContext(ThemeContext);
+  const  navigationOptions = {
+
+  }
   return(
     <SafeAreaView style={{backgroundColor: `${theme.bgColor}`}}>
       <ScrollView>
@@ -38,5 +42,21 @@ const HomeScreen = () => {
     );
 }
 
-
+HomeScreen.navigationOptions = ({navigation}) => {
+  return{
+  title: "Home",
+  headerRight: (
+        <View style={globalStyle.iconContainer}>
+          <Icon 
+            name="chart-line" 
+            size={20} 
+            style={globalStyle.icon}
+            onPress={ ()=> {  
+              navigation.navigate('Dashboard');
+            }}
+          />
+        </View>
+      )
+          }
+}
 export default HomeScreen;

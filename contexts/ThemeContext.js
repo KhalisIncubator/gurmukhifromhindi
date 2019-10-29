@@ -3,16 +3,16 @@ import React, {useState} from 'react';
 const ThemeContext = React.createContext();
 
 const ThemeProvider = (props) => {
-  const [bgColor, changeBgColor] = useState('darkgrey');
-  const [cardColor, changeCardColor] = useState('lightgray');
+  const [bgColor, setBgColor] = useState('white');
+  const [cardColor, setCardColor] = useState('lightgray');
 
   return(
     <ThemeContext.Provider 
     value={{
       bgColor, 
-      changeBgColor,
+      setBgColor,
       cardColor,
-      changeCardColor
+      setCardColor
     }}>
       {props.children}
     </ThemeContext.Provider>

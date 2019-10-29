@@ -90,8 +90,33 @@ const flashCardStyle = StyleSheet.create({
     tintColor: '#fff',
   }
 });
-
+const settingsStyle = StyleSheet.create({
+  card: {
+    margin: 15,
+    borderRadius: 15,
+    padding: 20,
+  }, 
+  descText: {
+    fontSize: 20,
+    padding: 5,
+    alignSelf: 'flex-start'
+  },
+  imageProps: {
+    resizeMode: 'contain',
+    padding: 10,
+  },
+  imgStyle: {
+    width: '100%',
+    height: 75
+  },
+  title:{
+    fontWeight: '300',
+    fontSize: 40,
+    padding: 5
+  }
+});
 export {
   flashCardStyle,
   courseCard,
+  settingsStyle,
 }
