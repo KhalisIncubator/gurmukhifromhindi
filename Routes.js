@@ -51,7 +51,7 @@ const HomeNavigator = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold',
       },
-      title: "Title",
+      title: "Home",
       headerRight: (
         <View style={globalStyle.iconContainer}>
           <Icon 
@@ -87,10 +87,10 @@ const SearchNav = createStackNavigator(
 );
 const SettingsNav = createStackNavigator(
   {
-    Home: SettingsScreen, 
+    Settings: SettingsScreen, 
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Settings',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#f4511e',
@@ -99,7 +99,9 @@ const SettingsNav = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold',
       },
+      title: 'Settings',
     },
+    
   }
 );
 const AppNavigator = createBottomTabNavigator({

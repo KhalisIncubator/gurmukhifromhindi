@@ -2,9 +2,11 @@ import React, {useContext} from 'react';
 import {
   View,
   ScrollView,
+  Button,
   FlatList,
   SafeAreaView,
-  StyleSheet
+  StyleSheet,
+  Alert
 } from 'react-native';
 import globalStyle from '../config/styles';
 import  {ThemeContext} from '../contexts/ThemeContext';
@@ -17,7 +19,7 @@ import CourseCard from '../components/CourseCard';
 const HomeScreen = () => {
   const theme = useContext(ThemeContext);
   return(
-    <SafeAreaView>
+    <SafeAreaView style={{backgroundColor: `${theme.bgColor}`}}>
       <ScrollView>
         <FlatList 
           data={CourseList}
