@@ -1,9 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from 'react-navigation-stack';
-import {
-  createSwitchNavigator,
-  createAppContainer
-} from 'react-navigation';
+import {View} from 'react-native';
+import {createAppContainer} from 'react-navigation';
 
 import {createBottomTabNavigator} from 'react-navigation-tabs'
 
@@ -14,7 +12,7 @@ import Placeholder from './screens/Placeholder';
 import SettingsScreen from './screens/Settings';
 import Course from './screens/Course';
 import LessonSelector from './screens/LessonSelector';
-
+import Dashboard from './screens/Dashboard';
 
 const CourseNav = createStackNavigator(
   {
@@ -39,6 +37,7 @@ const HomeNavigator = createStackNavigator(
   {
     Home: Homescreen,
     Learn: CourseNav,
+    Dashboard: Dashboard,
   },
   {
     initialRouteName: 'Home',
@@ -51,6 +50,7 @@ const HomeNavigator = createStackNavigator(
         fontWeight: 'bold',
       },
     },
+      
   }
 );
 const SearchNav = createStackNavigator(
@@ -72,10 +72,10 @@ const SearchNav = createStackNavigator(
 );
 const SettingsNav = createStackNavigator(
   {
-    Home: SettingsScreen, 
+    Settings: SettingsScreen, 
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Settings',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#f4511e',
@@ -84,7 +84,9 @@ const SettingsNav = createStackNavigator(
       headerTitleStyle: {
         fontWeight: 'bold',
       },
+      title: 'Settings',
     },
+    
   }
 );
 const AppNavigator = createBottomTabNavigator({
