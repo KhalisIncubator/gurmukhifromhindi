@@ -9,7 +9,7 @@ import {
   StyleSheet 
 } from 'react-native';
 import { ThemeContext } from '../contexts/ThemeContext';
-import settings from '../config/settings.json';
+import settings from '../config/Settings.json';
 import {settingsStyle} from '../config/styles';
 import {Card, Image, Divider} from 'react-native-elements';
 

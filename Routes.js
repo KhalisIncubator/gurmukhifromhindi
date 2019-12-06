@@ -11,16 +11,14 @@ import Homescreen from './screens/Home';
 import Placeholder from './screens/Placeholder';
 import SettingsScreen from './screens/Settings';
 import Course from './screens/Course';
-import LessonSelector from './screens/LessonSelector';
 import Dashboard from './screens/Dashboard';
 
 const CourseNav = createStackNavigator(
   {
-    SelectLesson: LessonSelector, 
     Course: Course,
   },
   {
-    initialRouteName: 'SelectLesson',
+    initialRouteName: 'Course',
     defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: '#f4511e',
