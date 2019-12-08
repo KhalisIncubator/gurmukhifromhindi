@@ -1,25 +1,27 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import {
   View,
-  ScrollView,
   Text,
-  Button,
-  FlatList,
   SafeAreaView,
-  StyleSheet,
-  Alert
+  FlatList
 } from 'react-native';
 import globalStyle from '../config/styles';
 import { ThemeContext } from '../contexts/ThemeContext';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-
 const Courses = require('../config/courses.json');
 const CourseList = Courses.courses;
 
-const HomeScreen = ({ navigation }) => {
-  const theme = useContext(ThemeContext);
 
+import {
+  NavigationStackScreenComponent,
+  NavigationStackScreenProps
+} from 'react-navigation-stack';
+
+interface Props extends NavigationStackScreenProps { }
+
+const Home: NavigationStackScreenComponent<Props> = ({ navigation }) => {
+  const theme: any = React.useContext(ThemeContext);
   return (
     <View style={[globalStyle.container, { backgroundColor: `${theme.bgColor}` }]}>
       <Text>Hello There</Text>
@@ -36,8 +38,7 @@ const HomeScreen = ({ navigation }) => {
     </View>
   );
 }
-
-HomeScreen.navigationOptions = ({ navigation }) => {
+Home.navigationOptions = ({ navigation }) => {
   return {
     title: "Home",
     headerRight: (
@@ -54,4 +55,4 @@ HomeScreen.navigationOptions = ({ navigation }) => {
     )
   }
 }
-export default HomeScreen;
+export default Home;
