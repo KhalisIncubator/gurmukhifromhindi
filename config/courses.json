@@ -1,16 +1,16 @@
 {
   "courses": [
     {
-      "title": "Painti Akhaar", 
+      "title": "Painti Akhaar",
       "Description": "Learn the Punjabi Alphabet",
       "Image": "../config/img/testimg.png",
-      "Quiz Total": "7", 
-      "Lessons" : {
-        "Row1": { 
+      "Quiz Total": "7",
+      "Lessons": {
+        "Row1": {
           "Contents": "ੳ ਅ ੲ ਸ ਹ",
           "Icon": "flight-takeoff",
           "Name": "First Line"
-        },        
+        },
         "Row2": {
           "Contents": "ਕ ਖ ਗ ਘ ਙ ",
           "Icon": "flight-takeoff",
@@ -24,7 +24,7 @@
         "Row4": {
           "Contents": "ਟ ਠ ਡ ਢ ਣ",
           "Icon": "flight-takeoff",
-          "Name" : "Fourth Line"
+          "Name": "Fourth Line"
         },
         "Row5": {
           "Contents": "ਤ ਥ ਦ ਧ ਨ",
@@ -32,12 +32,12 @@
           "Name": "Fifth Line"
         },
         "Row6": {
-          "Contents":"ਪ ਫ ਬ ਭ ਮ",
+          "Contents": "ਪ ਫ ਬ ਭ ਮ",
           "Icon": "flight-takeoff",
           "Name": "Sixth Line"
         },
         "Row7": {
-          "Contents":"ਯ ਰ ਲ ਵ ੜ",
+          "Contents": "ਯ ਰ ਲ ਵ ੜ",
           "Icon": "flight-takeoff",
           "Name": "Seventh Line"
         }
@@ -47,13 +47,17 @@
       "title": "Muharni I",
       "Description": "Learn the Punjabi vowels",
       "Image": "https://i.pinimg.com/236x/19/85/86/1985864837b1229390cf060b4b58bbfd--guru-alphabet.jpg",
-      "Quiz Total": "7", 
-      "excludedRows": [1, 2, 3],
-      "Lessons" : {
+      "Quiz Total": "7",
+      "excludedRows": [
+        1,
+        2,
+        3
+      ],
+      "Lessons": {
         "Row1": {
           "isExcluded": "true",
           "Contents": {
-            "Slide1": "In Punjabi, vowels are not denoted by typical character ,unlike English.",        
+            "Slide1": "In Punjabi, vowels are not denoted by typical character ,unlike English.",
             "Slide2": "Instead, they are denoted by special symbols that can be attached to consonants.",
             "Slide3": "We will go over attaching to character in the next lesson, however. First, let us learn these vowels"
           },
@@ -66,14 +70,14 @@
           "Name": "Muharni Characters"
         }
       }
-    }, 
+    },
     {
       "title": "Muharni II",
       "Description": "Combining Vowels and Consonants",
       "Image": "",
       "Quiz Total": "7",
       "excludedRows": [],
-      "Lesson":{
+      "Lesson": {
         "Row1": {
           "isExcluded": "true",
           "Contents": {
@@ -90,7 +94,7 @@
           "Icon": "flight-takeoff",
           "Name": "Pracitce"
         }
-      } 
+      }
     },
     {
       "title": "Muharni III",
@@ -98,14 +102,14 @@
       "Image": "",
       "Quiz Total": "7",
       "excludedRows": [],
-      "Lesson":{
+      "Lesson": {
         "Row1": {
           "isExcluded": "true",
           "Contents": {
             "Slide1": "As mentioned in the previous lesson, the first row of the muharni table includes irregular combinations.",
             "Slide2": "What does this mean?",
             "Slide3": "This means that the first three letters of the alphabet don't combine with all of the muharni characters.",
-            "Slide4": "Let's take a look:",
+            "Slide4": "Let's take a look:"
           },
           "Icon": "flight-takeoff",
           "Name": "Tutorial"
@@ -115,7 +119,7 @@
           "Icon": "flight-takeoff",
           "Name": "Pracitce"
         }
-      } 
+      }
     }
   ]
 }

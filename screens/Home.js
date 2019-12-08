@@ -14,17 +14,26 @@ import { ThemeContext } from '../contexts/ThemeContext';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
+const Courses = require('../config/courses.json');
+const CourseList = Courses.courses;
+
 const HomeScreen = ({ navigation }) => {
   const theme = useContext(ThemeContext);
-  const navigationOptions = {
 
-  }
   return (
-    <SafeAreaView style={{ backgroundColor: `${theme.bgColor}` }}>
-      <ScrollView>
-        <Text>Hi There</Text>
-      </ScrollView>
-    </SafeAreaView>
+    <View style={[globalStyle.container, { backgroundColor: `${theme.bgColor}` }]}>
+      <Text>Hello There</Text>
+      <FlatList
+        data={CourseList}
+        renderItem={
+          ({ item, index }) =>
+            <View style={globalStyle.container}>
+              <Text>{CourseList[index].title}</Text>
+            </View>
+        }
+        keyExtractor={(item, index) => index.toString()}
+      />
+    </View>
   );
 }
 
