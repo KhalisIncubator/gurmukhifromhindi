@@ -21,7 +21,7 @@ import {
 interface Props extends NavigationStackScreenProps { }
 
 const Home: NavigationStackScreenComponent<Props> = ({ navigation }) => {
-  const theme = React.useContext(ThemeContext);
+  const theme: any = React.useContext(ThemeContext);
   return (
     <View style={[globalStyle.container, { backgroundColor: `${theme.bgColor}` }]}>
       <Text>Hello There</Text>
