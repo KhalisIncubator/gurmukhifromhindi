@@ -6,8 +6,8 @@ import {
   SafeAreaView
 } from 'react-native';
 
-export interface Props { }
-const Dashboard: React.FC<Props> = (props) => {
+
+const Dashboard: React.FC<null> = (props) => {
   return (
     <View>
       <Text>
